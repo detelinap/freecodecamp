@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Cat Survey form</title>
+  </head>
+
+  <h1 id="title">Survey about cats</h1>
+  <p id="description" class="margin-top">
+    Answer this survey to share with us what are your favorite cats
+  </p>
+  <form id="survey-form" method="post">
+    <fieldset>
+      <label for="name" id="name-label"
+        >Please enter your name
+        <input id="name" type="text" placeholder="Johana" required
+      /></label>
+      <label for="email" id="email-label"
+        >Please enter your email
+        <input id="email" type="email" placeholder="Doe" required
+      /></label>
+      <label for="number" id="number-label"
+        >Please enter how many cats you currently have<input
+          id="number"
+          type="number"
+          min="1"
+          max="100"
+          placeholder="2"
+      /></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>What is your cat's personality like?</legend>
+      <label>
+        <input
+          name="personality"
+          type="radio"
+          value="0"
+          class="inline"
+          checked
+        />
+        Friendly
+      </label>
+      <label>
+        <input name="personality" value="1" class="inline" type="radio" />
+        Shy
+      </label>
+    </fieldset>
+    <fieldset>
+      <label for="dropdown" class="dropdown-label">
+        What is the color of your cat's fur?
+        <select id="dropdown" class="margin-top">
+          <option value="">(select option)</option>
+          <option value="1">Black</option>
+          <option value="2">White</option>
+          <option value="3">Orange</option>
+          <option value="4">No fur</option>
+        </select>
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Are you thinking about getting another cat soon?</legend>
+      <label><input class="inline" type="checkbox" value="1" />Yes</label>
+      <label><input class="inline" type="checkbox" value="0" />No</label>
+      <label
+        >Share with us your best moment with your cat <textarea></textarea>
+      </label>
+    </fieldset>
+
+    <input id="submit" type="submit" />
+  </form>
+</html>
